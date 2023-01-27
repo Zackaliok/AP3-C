@@ -3,7 +3,7 @@
 //
 
 #include <stdio.h>
-#include "main.h"
+#include <string.h>
 
 /**
  * Exercise 1
@@ -47,8 +47,11 @@ char addDays(int days, int months, int years, int daysToAdd) {
         5 L’année n’est pas une année bissextile (elle compte 365 jours).
      */
     int yearsToAdd = daysToAdd / 365;
-    printf("%d", yearsToAdd);
-    return ' ';
+    int daysLeftAfterYears = daysToAdd % 365;
+    int monthsToAdd = daysLeftAfterYears / 12;
+    int daysLeft = daysLeftAfterYears % 12;
+
+    return (' ');
 }
 
 
@@ -68,13 +71,19 @@ char askDate() {
  * Ainsi, a donne z et z donne a, b donne y et y donne b, et ainsi de suite.
  * Développer un programme qui donne le ROT13 d’une chaîne de caractères saisie par l’utilisateur.
  */
+char convertToROT13(char *string) {
+    char orderedTab[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    char ROT13Tab[26] = {'z' ,'y', 'x', 'w', 'v', 'u', 't', 's', 'r', 'q', 'p', 'o', 'n', 'm','l', 'k', 'j', 'i', 'h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'};
 
+    for (int i = 0; i < sizeof(string); i++) {
+        // Get index of char
+        // Build the new string with ROT13Tab (and the index
+        //const int index= strstr(&string, (const char *) string[i]) - &string;;
+    }
+    printf("Done !");
+}
 
-
-
-
-
-int main(int argc , char * argv [])
+/*int main(int argc , char * argv [])
 {
     // Exercise 1
     //sayHello();
@@ -84,5 +93,8 @@ int main(int argc , char * argv [])
     //printf("%d \n", result);
 
     // Exercise 3
-    askDate();
-}
+    //askDate();
+
+    // Exercise 4
+    convertToROT13("hello");
+}*/
