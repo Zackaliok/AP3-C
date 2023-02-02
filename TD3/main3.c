@@ -10,7 +10,7 @@ enum promotion {
 };
 struct student {
     char * name;
-    enum promotion * promotion;
+    char * promotion;
     float notes[10];
 };
 
@@ -21,8 +21,8 @@ struct student {
  * @param notes
  * @return
  */
-struct student * createStudent(char * name, enum promotion * promotion, const float notes[10]) {
-    struct student * newStudent = (struct student*) malloc(sizeof(struct  student));
+struct student * createStudent(char * name, char * promotion, float notes[10]) {
+    struct student *newStudent = (struct student*) malloc(sizeof(struct  student));
     newStudent->name = name;
     newStudent->promotion = promotion;
     for (int i = 0; i < 10; i++) {
@@ -35,6 +35,7 @@ struct student * createStudent(char * name, enum promotion * promotion, const fl
 float sum(struct student * student) {
     float sum = 0;
     for (int i = 0; i < 10; i++) {
+        printf("%f\n", student->notes[i]);
         sum += student->notes[i];
     }
 
@@ -45,18 +46,46 @@ float avg(struct student * student) {
     return average;
 }
 
-//TODO: Function pour créer un tableau de 30 élèves
-// TODO : Appliquer la fonction de moyenne sur les 30 élèves
+float float_rand( )
+{
+    return (float)rand()/10;
+}
 
-int main() {
-    printf("Hello\n");
+void createClass(int n, struct student ** ptrClass) {
+    for (int i = 0; i < n; i++) {
+        float notes[10] = {
+                float_rand(0, 10),
+                float_rand(0, 10),
+                float_rand(0, 10),
+                float_rand(0, 10),
+                float_rand(0, 10),float_rand(0, 10),
+                float_rand(0, 10),float_rand(0, 10),float_rand(0, 10),
+                float_rand(0, 10),
 
-    float notes[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    struct student * myStudent = createStudent("Fredo", (enum promotion *) AP3, notes);
 
-    for (int i = 0; i < 10; i++) {
-        printf("%f\n", myStudent->notes[i]);
+
+        };
+
+        ptrClass[i] = createStudent("Student", "AP3", notes);
     }
+}
 
-    printf("Average: %f", avg(myStudent));
+float getGeneralAverage(struct student ** class) {
+    float sum = 0.0;
+    for (int i = 0; i < 30; i++) {
+
+    }
+}
+
+
+int main3() {
+    printf("Hello\n");
+    float notes[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    struct student * myStudent = createStudent("Fredo", "AP3", notes);
+
+    struct student ** class = (struct student **) malloc((sizeof (struct student) * 30));
+    createClass(30, (struct student **) &class);
+    //printf("%f", avg(class[0]));
+
+    printf("%f", float_rand());
 }
