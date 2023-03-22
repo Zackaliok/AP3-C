@@ -1,0 +1,19 @@
+1.
+char -> 1 octet
+int -> 4 octets
+float -> 4 octets
+double -> 8 octets
+long double -> 10
+
+2.
+for (int i = 0; i < 10; i++) {}
+
+3.
+a. int * ptrInt = &a;
+b. void * ptrGeneral;
+c. char c[5] = "truc";
+    char * p = &c[2];
+d. (int **)* tab[5] = ...
+
+4.
+Calloc alloue la mémoire (pour un tableau) et la mets à 0.

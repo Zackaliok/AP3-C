@@ -9,7 +9,7 @@
 
 struct liste_ {
     int  value;
-    struct  liste_ * next;
+    struct liste_ * next;
     struct liste_ * previous;
 };
 typedef  struct  liste_ * liste;
@@ -103,7 +103,7 @@ void deleteElement(liste l, int index){
     }
 }
 
-int main() {
+int main4() {
     printf("Hello\n");
 
     liste l1 = createNew (0);
