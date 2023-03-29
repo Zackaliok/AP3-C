@@ -2,7 +2,7 @@
 // Created by Tristan Fumiere on 08/02/2023.
 //
 
-#include <printf.h>
+#include <stdio.h>
 #include "mainDS.h"
 
 void exo1DS(int n) {

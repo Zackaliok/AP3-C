@@ -2,7 +2,7 @@
 // Created by Tristan Fumiere on 25/01/2023.
 //
 
-#include <printf.h>
+#include <stdio.h>
 #include "main2.h"
 
 void exo1() {

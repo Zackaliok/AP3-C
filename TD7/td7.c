@@ -2,7 +2,8 @@
 // Created by Tristan Fumiere on 22/03/2023.
 //
 
-#include <printf.h>
+
+#include <stdio.h>
 #include "td7.h"
 
 int div(int a) {

@@ -2,8 +2,8 @@
 // Created by Tristan Fumiere on 26/01/2023.
 //
 
-#include <printf.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "main3.h"
 enum promotion {
     CIR1, CIR2, M1, AP3, AP4, AP5
