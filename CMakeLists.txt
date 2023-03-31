@@ -5,4 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(AP3_C TD8/td8.c TD8/td8.h)
+add_executable(AP3_C TD9/td9.c TD9/td9.h)
